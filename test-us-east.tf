@@ -1,19 +1,19 @@
 provider "aws" {
   access_key = "${var.access_key}"
   secret_key = "${var.secret_key}"
-  region = "us-east-1"
+  region = "${var.region}"
 }
 
 resource "aws_instance" "test1" {
-  ami = "ami-1853ac65"
+  ami = "${lookup(var.amis, var.region)}"
   instance_type = "t2.micro"
   tags {
-    Name = "${var.Name}"
+    Name = "tf-test1"
   }
 }
 
 resource "aws_instance" "test2" {
-  ami = "ami-1853ac65"
+  ami = "${lookup(var.amis, var.region)}"
   instance_type = "t2.micro"
   tags {
     Name = "tf-test2"
