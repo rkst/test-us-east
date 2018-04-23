@@ -1,6 +1,7 @@
+variable "access_key" {}
+variable "secret_key" {}
+
 variable "region" {
-  access_key = ""
-  secret_key = ""
   default = "us-east-1"
 }
 
