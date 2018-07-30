@@ -19,11 +19,3 @@ resource "aws_instance" "test2" {
     Name = "tf-test2"
   }
 }
-
-resource "aws_instance" "test3" {
-  ami = "${lookup(var.amis, var.region)}"
-  instance_type = "t2.micro"
-  tags {
-    Name = "tf-test3"
-  }
-}
