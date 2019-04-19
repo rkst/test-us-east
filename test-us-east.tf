@@ -13,10 +13,10 @@ resource "aws_instance" "test1" {
   }
 }
 
-# resource "aws_instance" "test2" {
-#   ami = "${lookup(var.amis, var.region)}"
-#   instance_type = "t2.micro"
-#   tags {
-#     Name = "tf-test2"
-#   }
-# }
+resource "aws_instance" "test2" {
+  ami = "${lookup(var.amis, var.region)}"
+  instance_type = "t1.micro"
+  tags {
+    Name = "tf-test2"
+  }
+}
