@@ -9,7 +9,7 @@ resource "aws_instance" "test1" {
   instance_type = "t1.micro"
   tags {
     Name = "tf-test1"
-    Name2 = "dev"
+    Team = "dev"
   }
 }
 
@@ -18,5 +18,6 @@ resource "aws_instance" "test2" {
   instance_type = "t1.micro"
   tags {
     Name = "tf-test2"
+    Team = "security"
   }
 }
