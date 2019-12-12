@@ -9,6 +9,5 @@ resource "aws_instance" "test1" {
   instance_type = "t1.micro"
   tags = {
     Name = "tf-test1"
-    Team = "dev"
   }
 }
