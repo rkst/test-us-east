@@ -12,12 +12,3 @@ resource "aws_instance" "test1" {
     Team = "dev"
   }
 }
-
-resource "aws_instance" "test2" {
-  ami = "${lookup(var.amis, var.region)}"
-  instance_type = "t1.micro"
-  tags = {
-    Name = "tf-test2"
-    Team = "dev"
-  }
-}
